@@ -1,16 +1,44 @@
-# React + Vite
+# Vista Clara - Ótica & cuidado visual
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page desenvolvida com React + Vite + Tailwind CSS.
 
-Currently, two official plugins are available:
+## 🚀 Deploy no GitHub Pages
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Pré-requisitos
+1. Instale as dependências:
+```bash
+npm install
+```
 
-## React Compiler
+2. Configure o `base` no `vite.config.js`:
+   - Se o repositório for `seu-usuario.github.io`: deixe `base: '/'`
+   - Se o repositório tiver outro nome (ex: `visual-landing-page-vite`): altere para `base: '/visual-landing-page-vite/'`
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Deploy
 
-## Expanding the ESLint configuration
+Para fazer deploy no GitHub Pages, execute:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm run deploy
+```
+
+Este comando irá:
+1. Fazer o build do projeto (`npm run build`)
+2. Publicar a pasta `dist` na branch `gh-pages` do seu repositório
+
+### Configuração no GitHub
+
+1. Vá em **Settings** > **Pages** do seu repositório
+2. Em **Source**, selecione a branch `gh-pages` e a pasta `/ (root)`
+3. Salve as alterações
+
+O site estará disponível em:
+- `https://seu-usuario.github.io` (se for repositório `username.github.io`)
+- `https://seu-usuario.github.io/nome-do-repositorio` (caso contrário)
+
+## 📦 Scripts Disponíveis
+
+- `npm run dev` - Inicia o servidor de desenvolvimento
+- `npm run build` - Gera o build de produção
+- `npm run preview` - Preview do build de produção
+- `npm run deploy` - Faz deploy no GitHub Pages
